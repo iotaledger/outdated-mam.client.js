@@ -1,0 +1,45 @@
+{
+  "name": "mam.client.js",
+  "version": "0.1.0",
+  "description": "A library to encrypt, decrypt, and sign masked messages",
+  "main": "lib/mam.client.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iotaledger/mam.client.js.git"
+  },
+  "keywords": [
+    "iota",
+    "tangle",
+    "message",
+    "mam",
+    "encryption"
+  ],
+  "author": "Paul Handy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iotaledger/mam.client.js/issues"
+  },
+  "homepage": "https://github.com/iotaledger/mam.client.js#readme",
+  "devDependencies": {
+    "bower": "^1.8.0",
+    "browserify": "^14.1.0",
+    "chai": "^3.5.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-jshint": "^2.0.2",
+    "gulp-nsp": "^2.4.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-uglify": "^2.1.2",
+    "jshint": "^2.9.4",
+    "mocha": "^3.2.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
