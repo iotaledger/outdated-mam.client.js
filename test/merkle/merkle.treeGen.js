@@ -1,8 +1,6 @@
 var chai = require('chai');
 var assert = chai.assert;
 var MerkleTree = require('../../lib/merkle');
-var Curl = require('../../tempcrypt/curl');
-var Converter = require('../../tempcrypt/converter');
 
 describe('new.MerkleTree', function() {
 

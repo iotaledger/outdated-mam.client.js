@@ -18,14 +18,6 @@ describe('encryption.key', function() {
         it('should create key from: ' + test.seed + ' of length ' + test.length + ' equal to ' + test.expected, function() {
 
             var key = Encryption.key(test.seed, test.length);
-            var curl = new Crypto.curl();
-            var buffer = [];
-            var seed = Crypto.converter.trits(test.seed);
-            curl.initialize();
-            curl.absorb(seed);
-            curl.squeeze(buffer);
-            buffer = Crypto.converter.trytes(buffer);
-
             assert.deepEqual(key, test.expected);
         });
     })
