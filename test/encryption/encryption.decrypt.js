@@ -1,6 +1,6 @@
 var chai = require('chai');
 var assert = chai.assert;
-var Encryption = require('../../lib/crypto/encryption');
+var Encryption = require('../../lib/encryption');
 
 describe('encryption.encrypt', function() {
 

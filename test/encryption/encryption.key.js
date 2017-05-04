@@ -1,6 +1,8 @@
 var chai = require('chai');
 var assert = chai.assert;
-var Encryption = require('../../lib/crypto/encryption');
+var Encryption = require('../../lib/encryption');
+var Curl = require("../../tempcrypt/curl");
+var Converter = require('../../tempcrypt/converter');
 
 describe('encryption.key', function() {
 
@@ -17,9 +19,7 @@ describe('encryption.key', function() {
         it('should create key from: ' + test.seed + ' of length ' + test.length + ' equal to ' + test.expected, function() {
 
             var key = Encryption.key(test.seed, test.length);
-            var Curl = require("../../lib/crypto/curl");
             var curl = new Curl();
-            var Converter = require('../../lib/crypto/converter');
             var buffer = [];
             var seed = Converter.trits(test.seed);
             curl.initialize();
