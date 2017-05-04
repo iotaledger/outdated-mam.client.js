@@ -43,6 +43,7 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "crypto.iota.js": "*",
     "iota.lib.js": "^0.2.6"
   }
 }

@@ -2,8 +2,7 @@
 var chai = require('chai');
 var assert = chai.assert;
 var MerkleTree = require('../../lib/merkle');
-var Curl = require('../../tempcrypt/curl');
-var Converter = require('../../tempcrypt/converter');
+var Crypto = require('crypto.iota.js');
 
 describe('MerkleTree.get', function() {
 
@@ -26,7 +25,7 @@ describe('MerkleTree.get', function() {
             for(index = 0; index < test.count; index++) {
                 first = tree.get(index);
                 assert.equal(tree.root.hash.toString(), 
-                Converter.trytes(
+                Crypto.converter.trytes(
                     MerkleTree.verify(new Int32Array(first.key.hash.value), first.tree, index) ));
             }
         });

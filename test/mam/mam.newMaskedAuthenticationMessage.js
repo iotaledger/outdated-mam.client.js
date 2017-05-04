@@ -3,8 +3,7 @@ var chai = require('chai');
 var assert = chai.assert;
 var MAM = require('../../lib/mam');
 var MerkleTree = require('../../lib/merkle');
-var Curl = require('../../tempcrypt/curl');
-var Converter = require('../../tempcrypt/converter');
+var Crypto = require('crypto.iota.js');
 
 describe('MerkleTree.get', function() {
 
@@ -14,7 +13,7 @@ describe('MerkleTree.get', function() {
             seed: "KXRVLFETGUTUWBCNCC9DWO99JQTEI9YXVOZHWELSYP9SG9KN9WCKXOVTEFHFH9EFZJKFYCZKQPPBXYSGJ",
             encryptionSeed: "9XRVLFETGUTUWBCNCC9DWO99JQTEI9YXVOZHWELSYP9SG9KN9WCKXOVTEFHFH9EFZJKFYCZKQPPBXYSGJ",
             nextEncSeed: "AYZVLFETGUTUWBCNCC9DWO99JQTEI9YXVOZHWELSYP9SG9KN9WCKXOVTEFHFH9EFZJKFYCZKQPPBXYSGJ",
-            message: "Hello, World! I have the best messages, that no one else has as good as me! Test one two threee four five six seven",
+            message: "HELLOWORLDIAMATRYTE9ENCODEDSTRINGMADEBYIOTALIB9JSUTILASCIITOTRYTES",
             start: 3,
             count: 9,
             security: 1,
