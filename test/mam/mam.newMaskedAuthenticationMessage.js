@@ -14,7 +14,7 @@ describe('new.MAM', function() {
             encryptionSeed: "9XRVLFETGUTUWBCNCC9DWO99JQTEI9YXVOZHWELSYP9SG9KN9WCKXOVTEFHFH9EFZJKFYCZKQPPBXYSGJ",
             message: "HELLOWORLDIAMATRYTE9ENCODEDSTRINGMADEBYIOTALIB9JSUTILASCIITOTRYTES",
             start: 3,
-            count: 9,
+            count: 4,
             security: 1,
         },
     ]
