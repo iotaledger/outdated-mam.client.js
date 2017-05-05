@@ -5,7 +5,7 @@ var MAM = require('../../lib/mam');
 var MerkleTree = require('../../lib/merkle');
 var Crypto = require('crypto.iota.js');
 
-describe('MerkleTree.get', function() {
+describe('new.MAM', function() {
 
     var tests = [
         // Valid bundle
