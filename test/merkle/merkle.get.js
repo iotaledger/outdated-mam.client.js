@@ -22,11 +22,12 @@ describe('MerkleTree.get', function() {
             var tree, first, index;
             tree = new MerkleTree(test.seed, test.start, test.count, test.security);
             index = 0;
+            var rootTrytes = tree.root.hash.toString();
+            assert.equal(test.count, tree.root.size());
             for(index = 0; index < test.count; index++) {
                 first = tree.get(index);
-                assert.equal(tree.root.hash.toString(), 
-                Crypto.converter.trytes(
-                    MerkleTree.verify(new Int32Array(first.key.hash.value), first.tree, index) ));
+                var calculatedRoot = Crypto.converter.trytes(MerkleTree.verify(new Int32Array(first.key.hash.value), first.tree, index));
+                assert.equal(rootTrytes, calculatedRoot);
             }
         });
 
