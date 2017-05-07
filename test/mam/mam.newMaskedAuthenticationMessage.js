@@ -29,15 +29,14 @@ describe('new.MAM', function() {
             var index;
             for(index = 0; index < tree0.root.size(); index++) {
                 var mamTransactions = new MAM.MaskedAuthenticatedMessage({
-                    message: test.message, 
-                    merkleTree: tree0, 
-                    nextRoot: tree1.root.hash.toString(), 
-                    channelKey: test.encryptionSeed, 
+                    message: test.message,
+                    merkleTree: tree0,
+                    nextRoot: tree1.root.hash.toString(),
+                    channelKey: test.encryptionSeed,
                     channelKeyIndex: test.channelKeyIndex,
                     encryptionKeyIndex: test.encryptionKeyIndex,
                     index: index
                 });
-                var length = mamTransactions[0].message.length;
             }
         });
 
