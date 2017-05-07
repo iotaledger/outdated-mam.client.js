@@ -13,6 +13,8 @@ describe('new.MAM', function() {
             seed: "KXRVLFETGUTUWBCNCC9DWO99JQTEI9YXVOZHWELSYP9SG9KN9WCKXOVTEFHFH9EFZJKFYCZKQPPBXYSGJ",
             encryptionSeed: "9XRVLFETGUTUWBCNCC9DWO99JQTEI9YXVOZHWELSYP9SG9KN9WCKXOVTEFHFH9EFZJKFYCZKQPPBXYSGJ",
             message: "HELLOWORLDIAMATRYTE9ENCODEDSTRINGMADEBYIOTALIB9JSUTILASCIITOTRYTES",
+            encryptionKeyIndex: 1,
+            channelKeyIndex: 1,
             start: 3,
             count: 4,
             security: 1,
@@ -31,6 +33,8 @@ describe('new.MAM', function() {
                     merkleTree: tree0, 
                     nextRoot: tree1.root.hash.toString(), 
                     channelKey: test.encryptionSeed, 
+                    channelKeyIndex: test.channelKeyIndex,
+                    encryptionKeyIndex: test.encryptionKeyIndex,
                     index: index
                 });
                 var length = mamTransactions[0].message.length;
