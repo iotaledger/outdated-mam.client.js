@@ -37,6 +37,7 @@ describe('new.MAM', function() {
                     encryptionKeyIndex: test.encryptionKeyIndex,
                     index: index
                 });
+                assert.notEqual(mamTransactions.length, 0);
             }
         });
 
