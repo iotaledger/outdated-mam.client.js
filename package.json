@@ -40,10 +40,10 @@
     "jshint": "^2.9.4",
     "mocha": "^3.2.0",
     "vinyl-buffer": "^1.0.0",
+    "iota.lib.js": "^0.2.6",
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
-    "crypto.iota.js": "^0.0.3",
-    "iota.lib.js": "^0.2.6"
+    "crypto.iota.js": "^0.0.4"
   }
 }
