@@ -1,14 +1,18 @@
 const IOTA = require('iota.lib.js');
 const MAM = require('../lib/mam');
 const MerkleTree = require('../lib/merkle');
+const Encryption = require('../lib/encryption');
 
 const iota = new IOTA({
   provider: 'http://localhost:14700'
 });
 
+const seed = 'PAULUNOZTUVHPBKLTFVRJZTOPODGTYHRUIACDYDKRNAQMCUZGNWMDSDZMPWHKQINYFPYTIEDSZ9EJZYOD';
+/*
 const seed = 'UYRCUNOZTUVHPBKLTFVRJZTOPODGTYHRUIACDYDKRNAQMCUZGNWMDSDZMPWHKQINYFPYTIEDSZ9EJZYOD';
 const encryptionSeed = 'JLHQLDCYRVNJVOOUQ9DDZXJYOQVODPXS9XPXDLTLAOIAYANJZOM9KHLFUVLARJKLBVH9GPYFKKACWRUQL';
-const message = "MOSHIMOSHIWORLD";
+*/
+const message = "moshi moshi";
 const encryptionKeyIndex = 1;
 const channelKeyIndex = 1;
 const start = 3;
@@ -24,7 +28,7 @@ const trytes = new MAM.MaskedAuthenticatedMessage({
     message: iota.utils.toTrytes(message),
     merkleTree: tree0,
     nextRoot: tree1.root.hash.toString(),
-    channelKey: encryptionSeed,
+    channelKey: seed,
     channelKeyIndex: channelKeyIndex,
     encryptionKeyIndex: encryptionKeyIndex,
     index: index
