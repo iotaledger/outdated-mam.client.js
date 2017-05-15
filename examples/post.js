@@ -34,7 +34,7 @@ const trytes = new MAM.MaskedAuthenticatedMessage({
 const depth = 4;
 
 // minWeighMagnitude
-const minWeightMagnitude = 9;
+const minWeightMagnitude = 13;
 
 // Send trytes
 iota.api.sendTrytes(trytes, depth, minWeightMagnitude, (err, tx) => {

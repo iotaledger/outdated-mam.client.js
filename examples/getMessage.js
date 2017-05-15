@@ -23,7 +23,7 @@ iota.api.sendCommand({
     channel: MAM.messageID(channelKey)
 }, function(e, result) {
     if(e == undefined) {
-        const output = MAM.parse(result.ixi, {key: channelKey});
+        const output = MAM.parse(result.ixi, {key: channelKey, message: result.ixi.message, index: result.ixi.index});
         const asciiMessage = iota.utils.fromTrytes(output.message);
         if (root === output.root) {
             console.log("Public key match for " + root); 
