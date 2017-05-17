@@ -16,4 +16,6 @@ The ID published to the tangle is the hash of the hash of the message key seed.
 ### Protocol
 ----
 
+![Merkle](https://iotaledger.github.io/mam.client.js/doc/serial-merkle.svg)
+
 ![Protocol](https://iotaledger.github.io/mam.client.js/doc/mam-diagram.svg)
