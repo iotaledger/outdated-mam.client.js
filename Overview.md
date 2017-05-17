@@ -11,9 +11,10 @@ None of this describes the method of exchanging keys.
 
 ### Signatures
 
-![Merkle](https://iotaledger.github.io/mam.client.js/doc/serial-merkle.svg)
-
 Each message contains the root of the next merkle tree, indicating a path of forward identity, and the sibling hashes in the merkle tree. For example, if the key for B was used, Hashes A and CD would be included after the signature, terminated by a null hash string to indicate the end of the tree.
+The merkle trees are created by calculating the hash of their children. I,e. The parent of keys A and B is Hash(AB).
+
+![Merkle](https://iotaledger.github.io/mam.client.js/doc/serial-merkle.svg)
 
 Signing messages is done using the standard IOTA one-time signature scheme from the hash of the message, 
 with serial merkle trees to allow for temporary extension of identity,
@@ -22,6 +23,8 @@ but doesn't require the full signature size necessary with compound merkle trees
 The organization of the output message before encryption is
 
 ![Signature - Sibling Hashes - Null Hash - Next Merkle Root - Message](https://iotaledger.github.io/mam.client.js/doc/mam-layout.svg)
+
+Included in the tag of the transactions of the MAM is the index of the key used to allow for correct verification of the merkle root.
 
 ### Encryption
 Messages published with MAM are encrypted by one-time symmetric key encryption as described by:
