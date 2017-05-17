@@ -28,7 +28,7 @@ describe('new.MAM', function() {
             var tree1 = new MerkleTree(test.seed, test.start + test.count, test.count, test.security);
             var index;
             for(index = 1; index < tree0.root.size(); index++) {
-                var mamTransactions = new MAM.MaskedAuthenticatedMessage({
+                var mamTransactions = new MAM.create({
                     message: test.message,
                     merkleTree: tree0,
                     nextRoot: tree1.root.hash.toString(),
