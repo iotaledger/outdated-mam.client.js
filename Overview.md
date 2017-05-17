@@ -1,8 +1,8 @@
 ## Overview
 ----
 
-![MAM pub/sub procedure](./doc/encryption.svg)
+![Encryption](https://iotaledger.github.io/mam.client.js/doc/encryption.svg)
 
 ### Protocol
 ----
-![MAM pub/sub procedure](./doc/mam-diagram.svg)
+![Protocol](https://iotaledger.github.io/mam.client.js/doc/mam-diagram.svg)
