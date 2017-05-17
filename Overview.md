@@ -1,7 +1,7 @@
 ## Overview
 ----
 
-Below describes a user Peggy who wants to publish a message, and Sue who wants to subscribe to it.
+Below describes a user Peggy who wants to open a chennel to publish messages, and Sue who wants to subscribe to it.
 In the general case, it is assumed that channels have one publisher. 
 If Sue and Peggy wish to exchange messages, Sue will open a second channel to share with Peggy.
 None of this describes the method of exchanging keys.
