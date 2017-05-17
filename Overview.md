@@ -6,7 +6,7 @@ In the general case, it is assumed that channels have one publisher.
 If Sue and Peggy wish to exchange messages, Sue will open a second channel to share with Peggy.
 None of this describes the method of exchanging keys.
 
-![Protocol](https://iotaledger.github.io/mam.client.js/doc/mam-diagram.svg)
+![Protocol](https://iotaledger.github.io/mam.client.js/doc/mam-protocol.svg)
 
 
 ### Signatures
