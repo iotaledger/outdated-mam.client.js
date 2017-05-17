@@ -4,6 +4,7 @@
 Below describes a user Bob who wants to publish a message, and Alice who wants to subscribe to it.
 In the general case, it is assumed that channels have one publisher. 
 If Alice and Bob wish to exchange messages, Alice will open a second channel to share with Bob.
+None of this describes the method of exchanging keys.
 
 ![Protocol](https://iotaledger.github.io/mam.client.js/doc/mam-diagram.svg)
 
