@@ -12,7 +12,7 @@ const seed = 'PAULUNOZTUVHPBKLTFVRJZTOPODGTYHRUIACDYDKRNAQMCUZGNWMDSDZMPWHKQINYF
 //const message = "\"'I'm here for you in the same way that you're here for me, each person is an intricate piece of infinity. -Eyedea\" - Dukakis";
 const message = "\"'I'm still here for IOTA in the same way that you're here for me, each person is an intricate piece of infinity. -Eyedea\" - Dukakis";
 const channelKeyIndex = 3;
-const channelKey = Crypto.converter.trytes(Encryption.subseed(Encryption.hash(Encryption.increment(Crypto.converter.trits(seed.slice()))), channelKeyIndex));
+const channelKey = Crypto.converter.trytes(MAM.channelKey(Encryption.hash(Encryption.increment(Crypto.converter.trits(seed.slice()))), channelKeyIndex));
 const start = 3;
 const count = 4;
 const security = 1;
@@ -22,7 +22,7 @@ const tree1 = new MerkleTree(seed, start + count, count, security);
 let index = 0;
 
 // Get the trytes of the MAM transactions
-const trytes = new MAM.MaskedAuthenticatedMessage({
+const trytes = new MAM.create({
     message: iota.utils.toTrytes(message),
     merkleTree: tree0,
     index: index,
