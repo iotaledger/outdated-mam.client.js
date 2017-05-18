@@ -7,9 +7,9 @@
 \begin{align}
 Seed_{N+1} &= Hash ( 1 + Seed_N) \\
 ID_N &= Hash(Hash(Seed_N) ) \\
-Key_{N_i} &= Hash_{N_i}(Seed_N) \\
-Cipher_i &= Plain_i \oplus Key_i \\
-Plain_i &= Cipher_i \oplus \overline{Key_i}
+Key_{N}^i &= Hash_{N}^i(Seed_N) \\
+Cipher^i &= Plain^i \oplus Key^i \\
+Plain^i &= Cipher^i \oplus \overline{Key^i}
 \end{align}
 
 Where $\oplus$ represents the trinary sum, and $\overline{X}$ represents the trinary inverse.
