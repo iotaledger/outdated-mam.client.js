@@ -36,6 +36,6 @@ and then taking the hash  of that value.
 This ensures that no part of the current message leaks the key to the next message unintentially.
 A message chain is thus created, which a user can join at any point, but can never look backward.
 
-A message chain chain may be forked by incrementing more than once before taking the message hash.
+A message chain may be forked by incrementing more than once before taking the message hash.
 
 The ID published to the tangle is the hash of the hash of the message key seed.
