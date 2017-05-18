@@ -6,7 +6,7 @@ This is the official Javascript library for MAM(Masked Authenticated Messaging).
 
 It is possible to publish transactions to the Tangle that contain only messages, with no value. This introduces many possibilities for data integrity and communication, but comes with the caveat that message-only signatures are not checked. What we introduce is a method of symmetric-key encrypted, signed data that takes advantage of merkle-tree winternitz signatures for extended public key usability, that can be found trivially by those who know to look for it.
 
-For more details, take a look at the [Overview](../blob/master/Overview.md).
+For more details, take a look at the [Overview](../master/Overview.md).
 
 ## Notice
 It should be noted that the Javascript MAM Client is an **early beta release**. There is no assurance that unexpected issues will not occur. Please join the community and post [issues on here](https://github.com/iotaledger/mam.client.js/issues).
