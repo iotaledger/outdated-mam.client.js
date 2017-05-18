@@ -42,7 +42,7 @@ const tree1 = new MerkleTree(seed, start + count, count, security);
 ### Creating a Masked Authenticated Message
 
 ```Javascript
-const mam = new MaskedAuthenticatedMessage({
+const mam = MAM.create({
   message: 'WCTC9D9DCDFAEADBNA',
   merkleTree: tree0,
   index: index,
