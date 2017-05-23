@@ -22,7 +22,7 @@ const tree1 = new MerkleTree(seed, start + count, count, security);
 let index = 0;
 
 // Get the trytes of the MAM transactions
-const trytes = new MAM.create({
+const mam = new MAM.create({
     message: iota.utils.toTrytes(message),
     merkleTree: tree0,
     index: index,
@@ -36,10 +36,10 @@ const depth = 4;
 // minWeighMagnitude
 const minWeightMagnitude = 13;
 
-console.log("Next Key: " + trytes.nextKey);
+console.log("Next Key: " + mam.nextKey);
 
 // Send trytes
-iota.api.sendTrytes(trytes, depth, minWeightMagnitude, (err, tx) => {
+iota.api.sendTrytes(mam.trytes, depth, minWeightMagnitude, (err, tx) => {
   if (err)
     console.log(err);
   else
