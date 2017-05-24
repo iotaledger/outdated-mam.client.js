@@ -60,7 +60,7 @@ Use `MAM.parse` to get a parsed object of a MAM containing the `root`, `signingK
 
 ```Javascript
 
-const parsed = MAM.parse({key: channelKey, message: message, index: index});
+const parsed = MAM.parse({key: channelKey, message: message, tag: tag});
 
 // Prints an object of the parsed MAM
 console.log(parsed);
@@ -80,13 +80,15 @@ MAM.create(options)
 **`options`**: `Object`
  - **`message`**: `String` Tryte-encoded plain text  
  - **`merkleTree`**: `Object` Merkle tree
- - **`index`**: `Int` Index of the message key
+ - **`index`**: `Int` Index of the merkle tree leaf key
  - **`nextRoot`**: `String` Root of the next merkle tree
  - **`channelKey`**: `String` Channel key
 
 #### Return Value
 
-**`Array`** - Returns an array of trytes
+**`Object`**
+ - **`trytes`**: `Array` an array of trytes
+ - **`nextKey`**: `String` Tryte-encoded key for the following message
 
 ---
 
@@ -101,33 +103,32 @@ MAM.parse(options)
 1. **`options`**: `Object`
  - **`key`**: `String` Channel key
  - **`message`**: `Array` Array of trytes
- - **`index`**: `Int` Index
+ - **`tag`**: `String` Tryte-encoded tag field of the transaction (which contains the encryption nonce)
 
 #### Return Value
 
 **`Object`**
  - **`root`**: `String` Root of the merkle tree
- - **`signingKey`**: `String` Signing key
  - **`nextRoot`**: `String` Root of the next merkle tree
+ - **`nextKey`**: `String` Tryte-encoded key for the next message in this chain
  - **`message`**: `String` Tryte-encoded message
 
 ---
 
 ### `MAM.channelKey`
 
-Creates a `channelKey` for a given `seed` and `index`.
+Creates a `channelKey` for a given `seed` and `nonce`.
 
 #### Input
 ```Javascript
-MAM.channelKey(seed, index, subchannel)
+MAM.channelKey(key, nonce)
 ```
-1. **`seed`**: `String` 81-trytes seed
-2. **`index`**: `Int` Index
-3. **`subchannel`** `Int` Optional subchannel
+1. **`key`**: `String` 81-trytes current channel key
+2. **`nonce`**: `String` Random 27-tryte string
 
 #### Return value
 
-**`String`** Returns the channel key.
+**`String`** Returns the next channel key.
 
 ---
 
@@ -291,20 +292,3 @@ Encryption.hash(key, curl)
 #### Return value
 
 **`String`** Returns the hash of the given key
-
----
-
-### `Encryption.key`
-
-Creates the key for a given `seed` and `length`.
-
-#### Input
-```Javascript
-Encryption.key(seed, length)
-```
-1. **`seed`**: `String` 81-trytes seed
-2. **`length`**: `Int`
-
-#### Return value
-
-**`String`** Returns the encryption key
