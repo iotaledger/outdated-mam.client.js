@@ -20,7 +20,7 @@ Signing messages is done using the standard IOTA one-time signature scheme from 
 with serial merkle trees to allow for temporary extension of identity,
 but doesn't require the full signature size necessary with compound merkle trees.
 
-The organization of the output message before encryption is [Signature - Sibling Hashes - Null Hash - Next Merkle Root - Message].
+The organization of the output message before encryption is [Signature - Key Index - Sibling Hashes - Null Hash - Next Merkle Root - Message].
 
 Included in the tag of the transactions of the MAM is the index of the key used to allow for correct verification of the merkle root.
 
