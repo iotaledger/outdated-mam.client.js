@@ -1,6 +1,6 @@
 {
   "name": "mam.client.js",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A library to encrypt, decrypt, and sign masked messages",
   "main": "lib/mam.client.js",
   "directories": {
@@ -21,7 +21,7 @@
     "encryption"
   ],
   "author": "Paul Handy",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/iotaledger/mam.client.js/issues"
   },
