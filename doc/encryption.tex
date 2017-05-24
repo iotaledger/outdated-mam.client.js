@@ -5,9 +5,9 @@
 \begin{document}
 
 \begin{align}
-Seed_{N+1} &= Hash ( 1 + Seed_N) \\
+Seed_{N+1} &= Hash ( (1 + Seed_N), Nonce_N ) \\
 ID_N &= Hash(Hash(Seed_N) ) \\
-Key_{N}^i &= Hash_{N}^i(Seed_N) \\
+Key_{N}^i &= Hash_{N}^i(Seed_N, Nonce_N) \\
 Cipher^i &= Plain^i \oplus Key^i \\
 Plain^i &= Cipher^i \oplus \overline{Key^i}
 \end{align}
