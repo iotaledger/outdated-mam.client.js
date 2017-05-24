@@ -1,6 +1,6 @@
 {
   "name": "mam.client.js",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A library to encrypt, decrypt, and sign masked messages",
   "main": "lib/mam.client.js",
   "directories": {
