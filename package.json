@@ -9,6 +9,9 @@
   "scripts": {
     "test": "mocha"
   },
+  "bin": {
+    "mam_encrypt": "./bin/mam_encrypt.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/iotaledger/mam.client.js.git"
@@ -44,6 +47,7 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "comander": "^2.9.0",
     "crypto.iota.js": "^0.0.4"
   }
 }
