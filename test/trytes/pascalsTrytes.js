@@ -7,6 +7,10 @@ describe.only('Trytes.pascalsTrytes', function () {
     var tests = [
         // Valid bundle
         {
+            trytes: '',
+            pascal: 'A9'
+        },
+        {
             trytes: 'ABCDEF',
             pascal: 'AFABCDEF'
         },
@@ -22,7 +26,7 @@ describe.only('Trytes.pascalsTrytes', function () {
 
     tests.forEach(function (test) {
 
-        it('should return a valid pascal tryte version of a tryte string: ' + test.trytes + ' with ' + test.pascal, function () {
+        it('should return a valid pascal tryte version of a tryte string: \'' + test.trytes + '\' with \'' + test.pascal + '\'', function () {
             var result = trytes.pascalsTrytes(test.trytes);
             assert.equal(test.pascal, result);
         });
