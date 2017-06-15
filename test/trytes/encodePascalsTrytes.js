@@ -2,7 +2,7 @@ var chai = require('chai');
 var assert = chai.assert;
 var trytes = require('../../lib/trytes');
 
-describe.only('Trytes.pascalsTrytes', function () {
+describe.only('Trytes.encodePascalsTrytes', function () {
 
     var tests = [
         // Valid bundle
@@ -16,18 +16,18 @@ describe.only('Trytes.pascalsTrytes', function () {
         },
         {
             trytes: '9ABCDEFGHIJKLMNOPQRSTUVWXY',
-            pascal: 'AZ9ABCDEFGHIJKLMNOPQRSTUVWXY'
+            pascal: 'BZA9ABCDEFGHIJKLMNOPQRSTUVWXY'
         },
         {
             trytes: '9ABCDEFGHIJKLMNOPQRSTUVWXYZ',
-            pascal: 'BA99ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+            pascal: 'B9A9ABCDEFGHIJKLMNOPQRSTUVWXYZ'
         }
     ]
 
     tests.forEach(function (test) {
 
         it('should return a valid pascal tryte version of a tryte string: \'' + test.trytes + '\' with \'' + test.pascal + '\'', function () {
-            var result = trytes.pascalsTrytes(test.trytes);
+            var result = trytes.encodePascalsTrytes(test.trytes);
             assert.equal(test.pascal, result);
         });
     });
