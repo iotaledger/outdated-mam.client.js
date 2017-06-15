@@ -2,7 +2,7 @@ var chai = require('chai');
 var assert = chai.assert;
 var trytes = require('../../lib/trytes');
 
-describe.only('Trytes.encodePascalsTrytes', function () {
+describe('Trytes.encodePascalsTrytes', function () {
 
     var tests = [
         // Valid bundle
