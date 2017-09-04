@@ -1,3 +1,7 @@
+# Notice of Deprecation
+
+Development on this repository will not continue; further development can be found on (in-progress) github.com/iotaledger/MAM
+
 # MAM Client Javascript Library
 
 This is the official Javascript library for MAM(Masked Authenticated Messaging).
