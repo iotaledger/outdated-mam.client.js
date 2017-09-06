@@ -2,7 +2,7 @@ const IOTA = require('iota.lib.js');
 const MAM = require('../lib/mam');
 const MerkleTree = require('../lib/merkle');
 const Encryption = require('../lib/encryption');
-var Crypto = require('crypto.iota.js');
+var Crypto = require('iota.crypto.js');
 
 const iota = new IOTA({
   provider: 'http://localhost:14600'

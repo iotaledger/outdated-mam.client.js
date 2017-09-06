@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const Crypto = require('crypto.iota.js');
+const Crypto = require('iota.crypto.js');
 const Encryption = require('../lib/encryption');
 const IOTA = require('iota.lib.js');
 const MAM = require('../lib/mam');
